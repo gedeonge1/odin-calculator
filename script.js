@@ -15,3 +15,8 @@ function divide(num1,num2){
     num1 /= num2
     return num1
 }
+
+// declaring 3 variables that will hold 2 values and an operator
+let currentValue = '';
+let previousValue = '' ;
+let operator = '';
