@@ -116,3 +116,14 @@ equal.addEventListener('click', function(){
         previousScreen.textContent = previousValue
     }
 })
+
+// fucntion that adds decimal in calculator when dot button is clicked
+let decimal = document.querySelector('.dot')
+decimal.addEventListener('click', function(e){
+    
+    if(currentValue.includes(e.target.textContent) === false){
+        currentValue += e.target.textContent
+        currentScreen.textContent = currentValue
+    } 
+
+})
