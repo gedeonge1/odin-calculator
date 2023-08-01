@@ -72,3 +72,16 @@ numbers.forEach(number => number.addEventListener('click',function(e){
 function handleNumbers(num){
     currentValue += num
 }
+
+//getting text content of each operator button and assign it to operator value, updating previous value and current value
+operators.forEach( op => op.addEventListener('click',function(e){
+    handleOperators(e.target.textContent)
+    previousScreen.textContent = `${previousValue} ${operator}`
+    currentScreen.textContent = ''
+}))
+
+function handleOperators(op){
+    operator = op
+    previousValue = currentValue
+    currentValue = ''
+}
