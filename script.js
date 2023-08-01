@@ -127,3 +127,79 @@ decimal.addEventListener('click', function(e){
     } 
 
 })
+
+// function that switches dark and light mode
+let mode = document.querySelector('.mode')
+    mode.addEventListener('click', function(){
+        changeMode()
+})
+
+let body = document.querySelector('body').style
+let title = document.querySelector('h1').style
+
+function changeMode(){
+    if (body.backgroundColor === 'grey'){
+        body.backgroundColor = 'black'
+        title.color = 'white'
+
+        numbers.forEach(item => item.style.color = '')
+        equal.style.color = 'paleturquoise'
+        operators.forEach(item => item.style.color = 'paleturquoise')
+
+        decimal.style.color = 'paleturquoise'
+        decimal.addEventListener('mouseover',function (e) {e.target.style.color = 'black'})
+        decimal.addEventListener('mouseout',function (e) {e.target.style.color = 'paleturquoise'})
+        clear.addEventListener('mouseover',function (e) {e.target.style.color = 'black'})
+        clear.addEventListener('mouseout',function (e) {e.target.style.color = 'paleturquoise'})
+        equal.addEventListener('mouseover',function (e) {e.target.style.color = 'black'})
+        equal.addEventListener('mouseout',function (e) {e.target.style.color = 'paleturquoise'})
+
+        operators.forEach(item => item.addEventListener('mouseover',function (e) {e.target.style.color = 'black'}))
+        operators.forEach(item => item.addEventListener('mouseout',function (e) {e.target.style.color = 'paleturquoise'}))
+        numbers.forEach(item => item.addEventListener('mouseover',function (e) {e.target.style.color = 'black'}))
+        numbers.forEach(item => item.addEventListener('mouseout',function (e) {e.target.style.color = 'paleturquoise'}))
+
+
+        screen.style.borderColor = 'skyblue'
+        currentScreen.style.color = 'skyblue'
+        previousScreen.style.color = 'skyblue'
+        clear.style.color = 'paleturquoise'
+
+        mode.style.color = 'grey'
+        mode.textContent = "Grey"
+        mode.style.backgroundColor = 'black'
+        mode.style.borderColor = 'grey' 
+        
+    } else {
+        body.backgroundColor = 'grey'
+        title.color = 'black'
+
+        numbers.forEach(item => item.style.color = 'black')
+        equal.style.color = 'black'
+        operators.forEach(item => item.style.color = 'black')
+        decimal.style.color = 'black'
+        clear.style.color = 'black'
+
+        screen.style.borderColor = 'navy'
+        currentScreen.style.color = 'navy'
+        previousScreen.style.color = 'navy'
+
+        mode.style.color = 'black'
+        mode.textContent = "Dark"
+        mode.style.backgroundColor ='grey'
+        mode.style.borderColor = 'black'
+       
+        decimal.addEventListener('mouseover',function (e) {e.target.style.color = 'black'})
+        decimal.addEventListener('mouseout',function (e) {e.target.style.color = 'black'})
+        clear.addEventListener('mouseover',function (e) {e.target.style.color = ' black'})
+        clear.addEventListener('mouseout',function (e) {e.target.style.color = 'black'})
+        equal.addEventListener('mouseover',function (e) {e.target.style.color = 'black'})
+        equal.addEventListener('mouseout',function (e) {e.target.style.color = 'black'})
+
+        numbers.forEach( item =>  item.addEventListener('mouseover',function (e) {e.target.style.color = 'black'}))
+        numbers.forEach( item =>  item.addEventListener('mouseout',function (e) {e.target.style.color = 'black'}))
+        operators.forEach(item => item.addEventListener('mouseover',function (e) {e.target.style.color = 'black'}))
+        operators.forEach(item => item.addEventListener('mouseout',function (e) {e.target.style.color = 'black'}))
+    }
+
+}
