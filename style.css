@@ -1,0 +1,99 @@
+body{
+    margin: 0;
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: black;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1{
+    color: white;
+}
+.first-row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;  
+}
+
+.screen{
+    border: 1px solid paleturquoise;
+    width: 207px;
+    height: 45px;
+    display: flex;
+    flex-direction: column;
+    align-items:  flex-end;
+    font-size: 25px;
+    overflow: hidden;
+    
+}
+
+.previous-number{
+    font-size: 14px;
+}
+
+.btn {
+    width: 50px;
+    height: 45px;
+    margin: 9px;
+    font-size: 25px;
+    background-color: transparent;
+    border-radius: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+     color: paleturquoise;
+}
+.btn:hover{
+    cursor: pointer;
+    color: black;
+}
+
+.number{
+    border: 1px solid greenyellow;
+}
+.number:hover{
+    background-color: greenyellow;
+}
+
+.operator{
+    border: 1px solid skyblue; 
+}
+.operator:hover{
+    background-color: skyblue;
+}
+
+.equal{
+    border: 1px solid violet;
+}
+.equal:hover{
+    background-color: violet;
+}
+
+
+.clear{
+    border: 1px solid khaki;
+}
+.clear:hover{
+    background-color: khaki;
+}
+
+.dot{
+    border: 1px solid orange;
+}
+.dot:hover{
+    background-color: orange;
+}
+
+footer{
+    margin-top: 1cm;
+    display: flex;
+    justify-content: space-around;
+}
+.mode{
+    border: 2px solid black;
+    width: 50px;
+    height: 23px;
+    border-radius: 5px;
+    background-color: grey;
+}
