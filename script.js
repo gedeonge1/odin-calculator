@@ -85,3 +85,13 @@ function handleOperators(op){
     previousValue = currentValue
     currentValue = ''
 }
+
+// function that clears and  sets everything to start
+let clear = document.querySelector('.clear')
+clear.addEventListener('click', function(){
+    currentScreen.textContent = ''
+    previousScreen.textContent = ''
+    currentValue = ''
+    previousValue = ''
+    operator = ''
+})
