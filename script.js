@@ -95,3 +95,24 @@ clear.addEventListener('click', function(){
     previousValue = ''
     operator = ''
 })
+
+// updating currentValue, previousValue, and displaying answer on screen when equal button is clicked
+equal.addEventListener('click', function(){
+
+    if(isNaN(operate()) === false){
+        currentValue = operate()
+        currentScreen.textContent = currentValue
+        previousValue = ''
+        previousScreen.textContent = previousValue
+    } else if(operate() === 'Error'){
+        currentValue = ''
+        currentScreen.textContent = 'Error'
+        previousValue = ''
+        previousScreen.textContent = previousValue
+    } else if(operate() === undefined){
+        currentValue = ''
+        currentScreen.textContent = 'Start again!'
+        previousValue = ''
+        previousScreen.textContent = previousValue
+    }
+})
