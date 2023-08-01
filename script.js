@@ -51,3 +51,14 @@ function operate(){
     let roundedResult = Math.round(result * 1000)/1000
     return roundedResult
 }
+
+//getting all html elements inorder to perform different actions with them
+let numbers = document.querySelectorAll('.number')
+let operators = document.querySelectorAll('.operator')
+let equal = document.querySelector('.equal')
+let previousScreen = document.querySelector('.previous-number')
+let currentScreen = document.querySelector('.current-number')
+let screen = document.querySelector('.screen')
+
+previousScreen.style.color = 'paleturquoise'
+currentScreen.style.color = 'paleturquoise'
