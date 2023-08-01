@@ -62,3 +62,13 @@ let screen = document.querySelector('.screen')
 
 previousScreen.style.color = 'paleturquoise'
 currentScreen.style.color = 'paleturquoise'
+
+//getting text content of each number button and assign the currentValue
+numbers.forEach(number => number.addEventListener('click',function(e){
+    handleNumbers(e.target.textContent)
+    currentScreen.textContent = currentValue 
+}));
+
+function handleNumbers(num){
+    currentValue += num
+}
