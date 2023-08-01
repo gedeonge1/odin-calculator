@@ -26,7 +26,7 @@ function operate(){
     
     if(currentValue === '' || previousValue === ''){
         return;
-    } else if(currentValue === '0' && operator === '/'){
+    } else if((currentValue === '0' && operator === '/') || currentValue === '.' || previousValue === '.'){
         return 'Error'
     }
     currentValue = Number(currentValue)
